@@ -21,4 +21,16 @@ const popup = {
 
 $popupButton.addEventListener("click", () => popup.hide());
 
+$popupContainer.addEventListener("click", (e) => {
+  if (e.target === $popupContainer) {
+    popup.hide();
+  }
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    popup.hide();
+  }
+});
+
 export default popup;

@@ -1,7 +1,9 @@
 import "../styles/index.css";
 
 import Game from "./Game.js";
-import { Player } from "./Player.js";
+import Player from "./Player.js";
+import Board from "./Board";
+import CELL_STATES from "./CELL_STATES";
 
 const $board = document.querySelector("#board");
 
@@ -11,12 +13,11 @@ $partialPiece.classList.add("piece");
 $partialPiece.classList.add("cross");
 $partialPiece.classList.add("partial");
 
-const player1 = new Player();
-const player2 = new Player();
+const board = new Board($board);
 
-const game = new Game($board, player1, player2);
+const player1 = new Player("cross", board, CELL_STATES.CROSS);
+const player2 = new Player("circle", board, CELL_STATES.CIRCLE);
 
-player1.defineGame(game);
-player2.defineGame(game);
+const game = new Game(board, player1, player2);
 
 game.start();
