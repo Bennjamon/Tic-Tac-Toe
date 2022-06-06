@@ -1,3 +1,5 @@
+import "../styles/index.css";
+
 import Game from "./Game.js";
 import { Player } from "./Player.js";
 
