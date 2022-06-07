@@ -1,0 +1,105 @@
+#scores {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #eee;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.score {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+#board {
+  height: 90%;
+  min-height: 80vh;
+  aspect-ratio: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 10px;
+  border-radius: 10px;
+  background-color: #eee;
+}
+
+.cell {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background-color: #fff;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.piece {
+  width: 80%;
+  height: 80%;
+  cursor: default;
+}
+
+.piece.circle {
+  border-radius: 50%;
+  border: #f00 10px solid;
+  position: relative;
+}
+
+.piece.circle::before {
+  content: "";
+  width: 101%;
+  height: 101%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f00;
+  border-radius: 50%;
+  animation: fill 1s ease-in-out;
+}
+
+.piece.cross {
+  position: relative;
+}
+
+.piece.cross::after {
+  content: "";
+  position: absolute;
+  top: 40%;
+  left: -10%;
+  width: 125%;
+  height: 10%;
+  background-color: #00f;
+  transform: rotate(45deg);
+  animation: rotate-right 1s ease-in-out;
+}
+
+.piece.cross::before {
+  content: "";
+  position: absolute;
+  top: 40%;
+  left: -10%;
+  width: 125%;
+  height: 10%;
+  background-color: #00f;
+  transform: rotate(-45deg);
+  animation: rotate-left 1s ease-in-out;
+}
+
+.piece.winner,
+.piece.winner::after,
+.piece.winner::before {
+  animation: win 1s infinite ease-in-out;
+}
+
+.partial,
+.partial::after,
+.partial::before {
+  opacity: 0.5;
+  cursor: pointer;
+  animation: none !important;
+}

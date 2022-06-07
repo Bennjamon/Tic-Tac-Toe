@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #fafafa;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+#game {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+.screen {
+  display: none;
+  align-items: center;
+  justify-items: center;
+}
+
+.screen.visible {
+  display: grid;
+}
+
+.button {
+  width: 100%;
+  border: 1px solid #333;
+  border-radius: 0.5rem;
+  background: #fafafa;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  font-family: "Press Start 2P", cursive;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #333;
+  color: #fafafa;
+  transition: 0.2s;
+}
+
+.dashed {
+  background: linear-gradient(90deg, black 50%, transparent 50%),
+    linear-gradient(90deg, transparent 50%, black 50%),
+    linear-gradient(0deg, black 50%, transparent 50%),
+    linear-gradient(0deg, transparent 50%, black 50%);
+  background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+  background-size: 16px 4px, 16px 4px, 4px 16px, 4px 16px;
+  background-position: 0 0, 100% 100%, 0 100%, 100% 0;
+  animation: dash 2s linear infinite;
+}

@@ -8,7 +8,7 @@
   </head>
   <body>
     <div id="game">
-      <div id="main-screen" class="screen">
+      <div id="main-screen" class="screen dashed">
         <h1 id="main-title">Tic-Tac-Toe</h1>
 
         <div id="main-buttons">
@@ -16,6 +16,23 @@
           <button id="player-vs-computer" class="button">
             Player vs Computer
           </button>
+        </div>
+      </div>
+      <div id="game-settings-screen" class="screen dashed">
+        <h1 id="game-settings-title">Game Settings</h1>
+
+        <div id="player-names">
+          <div id="player-1-name">
+            <input id="player-1-name" type="text" />
+          </div>
+          <div id="player-2-name">
+            <input id="player-2-name" type="text" />
+          </div>
+        </div>
+
+        <div id="game-settings-buttons">
+          <button id="back-to-main" class="button">Back</button>
+          <button id="start-game" class="button">Start Game</button>
         </div>
       </div>
       <div id="in-game-screen" class="screen">

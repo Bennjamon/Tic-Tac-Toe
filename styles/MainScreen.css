@@ -1,0 +1,23 @@
+#main-screen {
+  width: 80%;
+  max-width: 500px;
+  height: 80%;
+  max-height: 500px;
+}
+
+#main-title {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  font-family: "Press Start 2P", cursive;
+}
+
+#main-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
