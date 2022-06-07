@@ -8,34 +8,46 @@
   </head>
   <body>
     <div id="game">
-      <div id="scores">
-        <div id="player-1" class="score">
-          <h2>Player 1</h2>
-          <span id="player-1-score">0</span>
-        </div>
-        <div id="player-2" class="score">
-          <h2>Player 2</h2>
-          <span id="player-2-score">0</span>
+      <div id="main-screen" class="screen">
+        <h1 id="main-title">Tic-Tac-Toe</h1>
+
+        <div id="main-buttons">
+          <button id="player-vs-player" class="button">Player vs Player</button>
+          <button id="player-vs-computer" class="button">
+            Player vs Computer
+          </button>
         </div>
       </div>
+      <div id="in-game-screen" class="screen">
+        <div id="scores">
+          <div id="player-1" class="score">
+            <h2>Player 1</h2>
+            <span id="player-1-score">0</span>
+          </div>
+          <div id="player-2" class="score">
+            <h2>Player 2</h2>
+            <span id="player-2-score">0</span>
+          </div>
+        </div>
 
-      <div id="board">
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-      </div>
+        <div id="board">
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+        </div>
 
-      <div id="popup-container">
-        <div id="popup">
-          <h3 id="popup-title">Game Over</h3>
-          <span id="popup-content"></span>
-          <button id="popup-button">OK</button>
+        <div id="popup-container">
+          <div id="popup">
+            <h3 id="popup-title">Game Over</h3>
+            <span id="popup-content"></span>
+            <button id="popup-button">OK</button>
+          </div>
         </div>
       </div>
     </div>

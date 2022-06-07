@@ -1,10 +1,13 @@
 import CELL_STATES from "./CELL_STATES.js";
 import popup from "./popup.js";
+import Screen from "./Screen.js";
 
-export default class Game {
+export default class GameScreen extends Screen {
   #currentPlayer = CELL_STATES.CROSS;
 
   constructor(board, player1, player2) {
+    super(document.querySelector("#in-game-screen"));
+
     this.board = board;
     this.player1 = player1;
     this.player2 = player2;
@@ -32,6 +35,8 @@ export default class Game {
     popup.addListener(() => {
       this.reset();
     });
+
+    console.log(this);
 
     this.getMove();
   }
